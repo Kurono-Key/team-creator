@@ -1,0 +1,7 @@
+li.character
+  img src="/character_0#{character.first}.gif"
+  img src="/character_0#{character.second}.gif"
+  img src="/character_0#{character.third}.gif"
+  form.destroy action="/delete/character/#{character.id}" method="POST"
+    input type="hidden" name="_method" value="DELETE"
+    input type="submit" value="!"

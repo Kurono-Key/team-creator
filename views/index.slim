@@ -1,0 +1,9 @@
+h1 Cutie Creator
+form.build action="/create/character" method="POST"
+  input.button type="submit" value="Create a team of your dream!"
+-if @characters.any?
+  ul#characters
+    - @characters.each do |character|
+      ==slim :character, :locals => { :character => character }
+- else
+  h2 Feel lucky, create a firs team!
